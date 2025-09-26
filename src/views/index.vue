@@ -1,7 +1,8 @@
 <template>
   <div>
-  <component :is="curComponent"></component>
-  
+  <KeepAlive>
+    <component :is="curComponent"></component>
+  </KeepAlive>
   <Tabbar :active="active" @changeActive="getCurActive"></Tabbar>
   </div>
 </template>

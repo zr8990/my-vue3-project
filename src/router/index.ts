@@ -1,4 +1,4 @@
-import { KeepAlive } from 'vue'
+
 import {createRouter,createWebHistory} from 'vue-router'
 
 const routes = [
@@ -34,23 +34,31 @@ const routes = [
       KeepAlive:true
      }
   },
-    {
-    path: '/Commubnitytwo',
-    name: 'CommubnityTwo',
-    component: () => import('../views/home/index.vue').catch(() => {
+  //   {
+  //   path: '/Commubnitytwo',
+  //   name: 'CommubnityTwo',
+  //   component: () => import('../views/home/index.vue').catch(() => {
+  //   }),
+  //   meta: { title: '社区2',
+  //     KeepAlive:true
+  //    }
+  // },
+  // {
+  //   path: '/my',
+  //   name: 'My',
+  //   component: () => import('../views/my/index.vue').catch(() => {
+  //   }),
+  //   meta: { title: '我的',
+  //     KeepAlive:true
+  //    }
+  // },
+   {
+    path: '/dogDetail',
+    name: 'DogDetail',
+    component: () => import('../views/home/dogDetail/index.vue').catch(() => {
       // 组件加载失败处理
     }),
-    meta: { title: '社区2',
-      KeepAlive:true
-     }
-  },
-  {
-    path: '/my',
-    name: 'My',
-    component: () => import('../views/my/index.vue').catch(() => {
-      // 组件加载失败处理
-    }),
-    meta: { title: '我的',
+    meta: { title: '首页',
       KeepAlive:true
      }
   },

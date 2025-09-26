@@ -10,7 +10,7 @@
     </keep-alive>
   </router-view>
 </template>
-<script lang="ts" setup>
+<script lang="ts" setup name="App">
 import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 

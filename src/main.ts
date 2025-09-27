@@ -9,5 +9,9 @@ import router from './router'//引入路由配置文件
 // 2. 引入组件样式
 import 'vant/lib/index.css';
 
+// 引入pinia
+import { createPinia } from 'pinia'
+const pinia = createPinia()
+
 const app = createApp(App)
-app.use(router).mount('#app')
+app.use(router).use(pinia).mount('#app')

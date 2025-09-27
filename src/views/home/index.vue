@@ -18,6 +18,9 @@ const { getDogImg, dogList } = useDog()
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
+import {useUserStore} from '@/store/index.ts'
+const {name,age} = useUserStore()
+console.log(name,age)
 function getDogMore() {
   router.push({
     path:'/dogDetail'
@@ -28,6 +31,7 @@ function getDogMore() {
 <style lang="less" scoped>
 .home {
   padding-top: 64px;
+  padding-bottom: 80px;
 }
 .dog-img{
   width: 100%;

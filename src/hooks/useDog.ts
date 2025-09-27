@@ -18,8 +18,8 @@ export default  function() {
         // 
         try{ 
             await axios.get('https://dog.ceo/api/breed/hound/afghan/images').then(res =>{
-            console.log('res',res)
-            dogListMore.value=res.data
+            console.log('res--更多图片',res)
+            dogListMore.value=res.data.message
             })
         } catch(err){ 
         }
